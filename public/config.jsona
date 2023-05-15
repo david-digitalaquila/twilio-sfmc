@@ -24,9 +24,10 @@
             "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
+            "header": "",
             "format": "json",
-            "useJwt": false,
-            "timeout": 2000
+            "useJwt": true,
+            "timeout": 10000
         }
     },
     "configurationArguments": {
