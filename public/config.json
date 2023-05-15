@@ -25,7 +25,7 @@
                     "sid": ""
                 }
             ],
-            "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/execute",
+            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -34,9 +34,9 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "5e8b9eb7-ed0e-4f9e-9bcc-7bfd2a61dc6e",
+      "applicationExtensionKey": "8160cad8-f978-40c3-bf2f-7a842a226dc0",
        "save": {
-           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/save",
+           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -44,7 +44,7 @@
             "timeout": 2000
        },
        "publish": {
-           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/publish",
+           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -52,7 +52,7 @@
             "timeout": 2000
        },
        "validate": {
-           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/validate",
+           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -60,7 +60,7 @@
             "timeout": 2000
        },
        "TestSave": {
-            "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/testSave",
+            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/testSave",
             "verb": "POST",
             "body": "",
             "format": "json",
@@ -68,7 +68,7 @@
             "timeout": 2000
         },
        "stop": {
-           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/stop",
+           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/stop",
             "verb": "POST",
             "body": "",
             "format": "json",
