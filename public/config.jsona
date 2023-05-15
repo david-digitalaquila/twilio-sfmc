@@ -50,7 +50,7 @@
        "validate": {
            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
-            "useJwt": true
+            "useJwt": false
        },
        "stop": {
            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/stop",
