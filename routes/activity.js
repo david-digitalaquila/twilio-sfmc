@@ -118,7 +118,7 @@ exports.execute = function (req, res) {
 
     // FOR TESTING
     logData(req);
-    res.send(200, 'Publish');
+    res.send(200, 'Execute');
 
     // Used to decode JWT
     // JWT(req.body, process.env.jwtSecret, (err, decoded) => {
@@ -158,8 +158,8 @@ exports.publish = function (req, res) {
     
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
-//     logData(req);
-//     res.send(200, 'Publish');
+     logData(req);
+     res.send(200, 'Publish');
 };
 
 /*
@@ -179,23 +179,3 @@ exports.validate = function (req, res) {
     logData(req);
     res.send(200, 'Validate');
 };
-
-/**
- * This function relies on the env variables to be set
- * 
- * This function invokes the enhanced package authentication. 
- * This would return a access token that can be used to call additional Marketing Cloud APIs
- * 
- */
-function retrieveToken () {
-    axios.post(tokenURL, { // Retrieving of token
-        grant_type: 'client_credentials',
-        client_id: process.env.clientId,
-        client_secret: process.env.clientSecret
-    })
-    .then(function (response) {
-        return response.data['access_token'];
-    }).catch(function (error) {
-        return error;
-    });
-}
