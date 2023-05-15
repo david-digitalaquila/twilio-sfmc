@@ -106,9 +106,9 @@ exports.execute = async (req, res) => {
       /*body: body,
       messagingServiceSid: messagingService,
       to: to*/
-      body: 'Test',  
-      messagingServiceSid: 'MG4e55c82263dd5b2318868338e8b55d8d',      
-      to: '17192170770' 
+      body: 'Test',
+      messagingServiceSid: 'MG4e55c82263dd5b2318868338e8b55d8d',
+      to: '17192170770'
     });
     console.log(`SMS Result: ${JSON.stringify(result)}`);
     const {sid} = result;
