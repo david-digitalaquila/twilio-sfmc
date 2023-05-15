@@ -31,7 +31,7 @@
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "8160cad8-f978-40c3-bf2f-7a842a226dc0",
+      "applicationExtensionKey": "04521e5f-d20e-42aa-acb3-b24b16c55692",
        "save": {
            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/save",
             "verb": "POST",
