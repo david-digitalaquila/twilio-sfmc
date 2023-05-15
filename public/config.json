@@ -9,7 +9,7 @@
        "en-US": {
            "name": "Twilio SMS",
            "description": "Send Twilio SMS with Journey Builder",
-           "TwilioMessage":"Messages"
+           "TwilioMessage":"test"
        }
     },
     "arguments": {
@@ -20,49 +20,60 @@
                   "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}" 
                 }               
             ],
-            "outArguments": [],
-            "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/execute",
+            "outArguments": [
+                {
+                    "sid": ""
+                }
+            ],
+            "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/execute",
             "verb": "POST",
             "body": "",
-            "header": "",
             "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+            "useJwt": false,
+            "timeout": 2000
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "04521e5f-d20e-42aa-acb3-b24b16c55692",
+      "applicationExtensionKey": "5e8b9eb7-ed0e-4f9e-9bcc-7bfd2a61dc6e",
        "save": {
-           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/save",
+           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/save",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 3000
+            "timeout": 2000
        },
        "publish": {
-           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/publish",
+           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/publish",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 3000
+            "timeout": 2000
        },
        "validate": {
-           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/validate",
+           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/validate",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 3000
+            "timeout": 2000
        },
-       "stop": {
-           "url": "https://twilio-sfmc-digitalaquila.herokuapp.com/journeybuilder/stop",
+       "TestSave": {
+            "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/testSave",
             "verb": "POST",
             "body": "",
             "format": "json",
             "useJwt": false,
-            "timeout": 3000
+            "timeout": 2000
+        },
+       "stop": {
+           "url": "https://twlo-sfmc.herokuapp.com/journeybuilder/stop",
+            "verb": "POST",
+            "body": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 2000
        }
     },
     "wizardSteps": [
@@ -83,46 +94,55 @@
                         "accountSid": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "in"   
                         }
                     },                    
                     {
                         "authToken": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "in"   
                         }
                     },                    
                     {
-                        "from": {
-                            "dataType": "Phone",
+                        "messagingService": {
+                            "dataType": "String",
                             "isNullable": true,
-                            "direction": "out"   
+                            "direction": "in"   
                         }
                     },                    
                     {
                         "to": {
-                            "dataType": "Text",
+                            "dataType": "Phone",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "in"   
                         }
                     },
                     {
                         "body": {
                             "dataType": "String",
                             "isNullable": false,
-                            "direction": "out"   
+                            "direction": "in"   
                         }
                     },                    
                     {
                         "email": {
                             "dataType": "Email",
                             "isNullable": true,
-                            "direction": "out"
+                            "direction": "in"
                         }
                     }
                 ],
-                "outArguments": []
+                "outArguments": [
+                    {
+                        "sid": {
+                            "dataType": "String",
+                            "isNullable": false,
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
             }
         }
     }
