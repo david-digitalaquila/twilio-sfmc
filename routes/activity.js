@@ -103,7 +103,7 @@ exports.execute = async (req, res) => {
     });
     const client = require('twilio')(accountSid, authToken); 
     const result = await client.messages.create({ 
-      body: "{{Contact.Key}}",
+      body: body,
       messagingServiceSid: messagingService,
       to: to
     });
