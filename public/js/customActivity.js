@@ -106,7 +106,7 @@ define([
             "authToken": authToken,
             "messagingService": messagingService,
             "body": body,
-            "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}"
+            "to": to
         }];
 
         payload['metaData'].isConfigured = true;
