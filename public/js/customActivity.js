@@ -105,7 +105,7 @@ define([
             "accountSid": accountSid,
             "authToken": authToken,
             "messagingService": messagingService,
-            "body": "{{Contact.Attribute.TwilioV1.Body}}",
+            "body": body,
             "to": "{{Contact.Attribute.TwilioV1.TwilioNumber}}"
         }];
 
